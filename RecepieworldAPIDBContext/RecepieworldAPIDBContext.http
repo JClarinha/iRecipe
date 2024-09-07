@@ -1,0 +1,6 @@
+@RecepieworldAPIDBContext_HostAddress = http://localhost:5058
+
+GET {{RecepieworldAPIDBContext_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
