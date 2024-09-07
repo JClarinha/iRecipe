@@ -1,4 +1,4 @@
-﻿namespace RecepieWorldAPI.Data
+﻿namespace iRecipeAPI.Repositories
 {
     public class Class1
     {

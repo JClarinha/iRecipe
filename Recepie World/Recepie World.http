@@ -1,6 +1,0 @@
-@Recepie_World_HostAddress = http://localhost:5171
-
-GET {{Recepie_World_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
