@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Implementations\" />
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\iRecipe.Domain\iRecipe.Domain.csproj" />
+    <ProjectReference Include="..\iRecipeAPI.Data\iRecipeAPI.Data.csproj" />
   </ItemGroup>
 
 </Project>

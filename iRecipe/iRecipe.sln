@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iRecipeAPI.Data", "..\iReci
 		{D01E3125-9F08-494C-8452-7916ED0DEAA9} = {D01E3125-9F08-494C-8452-7916ED0DEAA9}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRecipeAPI.Repositories", "..\iRecipeAPI.Repositories\iRecipeAPI.Repositories.csproj", "{DF87C8CB-6CCF-417B-B279-2F4C51EEBBB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iRecipeAPI.Repositories", "..\iRecipeAPI.Repositories\iRecipeAPI.Repositories.csproj", "{DF87C8CB-6CCF-417B-B279-2F4C51EEBBB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

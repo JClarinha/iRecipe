@@ -22,6 +22,7 @@ namespace iRecipe.Domain
         public Difficulty Difficulty { get; set; }
         public int DifficultyId { get; set; }
         public byte[] Image { get; set; }
+        public string Preparation { get; set; }
 
         
     }

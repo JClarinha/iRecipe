@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using iRecipeAPI.Data.Context;
 
@@ -11,9 +12,11 @@ using iRecipeAPI.Data.Context;
 namespace iRecipeAPI.Data.Migrations
 {
     [DbContext(typeof(iRecipeAPIDBContext))]
-    partial class iRecipeAPIDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240911230758_PreparationAdded")]
+    partial class PreparationAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
