@@ -50,7 +50,7 @@ namespace iRecipeAPI.Repositories.Implementations
 
         public void Remove(User user)
         {
-            _dbSet.Remove(user);
+            _dbSet.Remove(user) ;
         }
 
     }
