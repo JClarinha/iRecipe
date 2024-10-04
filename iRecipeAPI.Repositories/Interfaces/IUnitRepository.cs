@@ -10,7 +10,7 @@ namespace iRecipeAPI.Repositories.Interfaces
     public interface IUnitRepository
     {
         List<Unit> GetAll();
-        Unit GetByName(string name);
+        List<Unit> GetByName(string name);
         Unit GetById(int id);
         Unit Add(Unit unit);
         Unit Update(Unit unit);

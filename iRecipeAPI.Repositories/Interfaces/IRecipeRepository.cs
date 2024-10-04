@@ -8,7 +8,7 @@ using iRecipe.Domain;
 
 namespace iRecipeAPI.Repositories.Interfaces
 {
-    public  interface IIRecipeRepository
+    public  interface IRecipeRepository
     {
         List<Recipe> GetAll();
         Recipe GetById(int id);
