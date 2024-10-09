@@ -1,4 +1,4 @@
-﻿using iRecipe.Domain;
+﻿using iRecipeAPI.Domain;
 using iRecipeAPI.Data.Context;
 using iRecipeAPI.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +24,11 @@ namespace iRecipeAPI.Repositories.Implementations
         public Category GetById(int id)
         {
             return _dbSet.FirstOrDefault(category => category.Id == id); //SELECT / FROM Category WHERE iD = ID;
+        }
+
+        public bool GetAny(int id)
+        {
+            return _dbSet.Any(category => category.Id == id);
         }
 
         public List <Category> GetByName(string name) 

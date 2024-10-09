@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace iRecipe.Domain
+namespace iRecipeAPI.Domain
 {
     public class User
     {

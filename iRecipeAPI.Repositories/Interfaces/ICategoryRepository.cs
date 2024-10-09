@@ -1,4 +1,4 @@
-﻿using iRecipe.Domain;
+﻿using iRecipeAPI.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +11,7 @@ namespace iRecipeAPI.Repositories.Interfaces
     {
         List<Category> GetAll();
         Category GetById(int id);
+        bool GetAny(int id);
         List<Category> GetByName(string name);
         Category Add(Category category);
         Category Update(Category category);

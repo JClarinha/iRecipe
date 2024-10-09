@@ -1,4 +1,4 @@
-﻿using iRecipe.Domain;
+﻿using iRecipeAPI.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +11,7 @@ namespace iRecipeAPI.Repositories.Interfaces
     {
         List<Ingredient> GetAll();
         Ingredient GetById(int id);
+        bool GetAny(int id);
         List<Ingredient> GetByName(string name);
         Ingredient Add(Ingredient ingredient);  
         Ingredient Update(Ingredient ingredient);

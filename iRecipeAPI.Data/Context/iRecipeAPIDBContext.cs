@@ -1,4 +1,4 @@
-﻿using iRecipe.Domain;
+﻿using iRecipeAPI.Domain;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -12,7 +12,7 @@ namespace iRecipeAPI.Data.Context
         public DbSet<Recipe> Recepies { get; set; }
         public DbSet<IngredientRecipe> IngredientRecepies { get; set; }
         public DbSet<Ingredient> Ingredients { get; set; }
-        //public DbSet<Favourite> Favorits { get; set; }
+        public DbSet<Favourite> Favorits { get; set; }
         public DbSet<Difficulty> Difficulties { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Category> Categories { get; set; }
@@ -20,7 +20,7 @@ namespace iRecipeAPI.Data.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=localhost; database=iRecipe; integrated security=true; TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Server=Clarinha_Laptop\\SQLEXPRESS; Database=iRecipe;Trusted_Connection=True;integrated security=true; TrustServerCertificate=True");
         }
 
 

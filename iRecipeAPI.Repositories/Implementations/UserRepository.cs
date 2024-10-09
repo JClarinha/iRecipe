@@ -1,4 +1,4 @@
-﻿using iRecipe.Domain;
+﻿using iRecipeAPI.Domain;
 using iRecipeAPI.Data.Context;
 using iRecipeAPI.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +29,11 @@ namespace iRecipeAPI.Repositories.Implementations
         public User GetById(int id) 
         {
             return _dbSet.FirstOrDefault(user => user.Id == id);
+        }
+
+        public bool GetAny(int id)
+        {
+            return _dbSet.Any(user => user.Id == id);
         }
 
         public List <User> GetByEmail(string email) 

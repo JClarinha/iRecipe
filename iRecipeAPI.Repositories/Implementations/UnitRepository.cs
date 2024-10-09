@@ -1,4 +1,4 @@
-﻿using iRecipe.Domain;
+﻿using iRecipeAPI.Domain;
 using iRecipeAPI.Data.Context;
 using iRecipeAPI.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -33,6 +33,11 @@ namespace iRecipeAPI.Repositories.Implementations
         {
             return _dbSet.FirstOrDefault(unit => unit.Id == id);
 
+        }
+
+        public bool GetAny(int id)
+        {
+            return _dbSet.Any(unit => unit.Id == id);
         }
 
         public Unit Add(Unit unit) 

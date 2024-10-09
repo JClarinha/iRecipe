@@ -1,4 +1,4 @@
-﻿using iRecipe.Domain;
+﻿using iRecipeAPI.Domain;
 using iRecipeAPI.Data.Context;
 using iRecipeAPI.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -19,9 +19,25 @@ namespace iRecipeAPI.Repositories.Implementations
             _dbSet = irecipeAPIDBContext.Set<Favourite>();
         }
 
-        public List<Favourite> GetAllByUser(User user)
+        public List<Favourite> GetAll()
         {
             return _dbSet.ToList();
+        }
+
+        public Favourite GetById(int id)
+        {
+            return _dbSet.FirstOrDefault(favourite => favourite.Id == id); //SELECT / FROM Category WHERE iD = ID;
+        }
+
+
+        public List<Favourite> GetAllByUser(User user)
+        {
+            return _dbSet.Where(favourite => favourite.UserId ==user.Id).ToList();
+        }
+
+        public bool GetAny(int id)
+        {
+            return _dbSet.Any(favourite => favourite.Id == id);
         }
 
         public Favourite Add(Favourite favourite)

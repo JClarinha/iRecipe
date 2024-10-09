@@ -1,11 +1,16 @@
-﻿using iRecipeAPI.Data.Context;
+﻿using iRecipeAPI.Domain;
+using iRecipeAPI.Data.Context;
 using iRecipeAPI.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using iRecipe.Domain;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace iRecipeAPI.Repositories.Implementations
 {
-    public  class IngredientRecipeRepository : IIngredientRecipeRepositoy
+    public class IngredientRecipeRepository : IIngredientRecipeRepository
     {
         private readonly DbSet<IngredientRecipe> _dbSet;
         private readonly iRecipeAPIDBContext _irecipeAPIDBContext;
@@ -37,7 +42,25 @@ namespace iRecipeAPI.Repositories.Implementations
                 .FirstOrDefault();
         }
 
+        public IngredientRecipe Add(IngredientRecipe ingredinentRecipe)
+        {
+            _dbSet.Add(ingredinentRecipe);
+            _irecipeAPIDBContext.SaveChanges();
+            return ingredinentRecipe;
+        }
 
+        public IngredientRecipe Update(IngredientRecipe ingredientRecipe)
+        {
+            _dbSet .Update(ingredientRecipe);
+            _irecipeAPIDBContext.SaveChanges();
+            return ingredientRecipe;
+        }
 
+        public void Remove(IngredientRecipe ingredientRecipe)
+        {
+            _dbSet.Remove(ingredientRecipe);
+            _irecipeAPIDBContext.SaveChanges();
+
+        }
     }
 }

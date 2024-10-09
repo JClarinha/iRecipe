@@ -1,4 +1,4 @@
-﻿using iRecipe.Domain;
+﻿using iRecipeAPI.Domain;
 using iRecipeAPI.Data.Context;
 using iRecipeAPI.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +23,16 @@ namespace iRecipeAPI.Repositories.Implementations
         public Recipe GetById(int id)
         {
             return _dbSet.FirstOrDefault(recipe => recipe.Id ==id);
+        }
+
+        public bool GetAny(int id)
+        {
+            return _dbSet.Any(recipe => recipe.Id == id);
+        }
+
+        public Recipe GetLast()
+        {
+            return _dbSet.OrderByDescending(p => p.RecipeDate).FirstOrDefault();
         }
 
         public List<Recipe> GetByName(string name)

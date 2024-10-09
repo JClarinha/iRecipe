@@ -1,4 +1,4 @@
-﻿using iRecipe.Domain;
+﻿using iRecipeAPI.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +11,7 @@ namespace iRecipeAPI.Repositories.Interfaces
     {
         List<User> GetAll();
         User GetById(int id);
+        bool GetAny(int id);
         List<User> GetByEmail(string email);
         User Add(User user);
         User Update(User user);

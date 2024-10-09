@@ -1,4 +1,4 @@
-﻿using iRecipe.Domain;
+﻿using iRecipeAPI.Domain;
 using iRecipeAPI.Data.Context;
 using iRecipeAPI.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +22,10 @@ namespace iRecipeAPI.Repositories.Implementations
         public Comment GetById(int id)
         {
             return _dbSet.FirstOrDefault(comment => comment.Id == id);
+        }
+        public bool GetAny(int id)
+        {
+            return _dbSet.Any(comment => comment.Id == id);
         }
 
         public Comment Add(Comment comment)

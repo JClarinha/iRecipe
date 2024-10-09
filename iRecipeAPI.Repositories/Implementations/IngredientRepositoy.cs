@@ -1,4 +1,4 @@
-﻿using iRecipe.Domain;
+﻿using iRecipeAPI.Domain;
 using iRecipeAPI.Data.Context;
 using iRecipeAPI.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +26,11 @@ namespace iRecipeAPI.Repositories.Implementations
         public Ingredient GetById(int id)
         {
             return _dbSet.FirstOrDefault(ingredient => ingredient.Id ==id);
+        }
+
+        public bool GetAny(int id)
+        {
+            return _dbSet.Any(ingredient => ingredient.Id == id);
         }
 
         public List<Ingredient> GetByName(string name)

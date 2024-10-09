@@ -78,6 +78,10 @@ namespace iRecipeAPI.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Difficulties");
@@ -103,7 +107,7 @@ namespace iRecipeAPI.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Favourite");
+                    b.ToTable("Favorits");
                 });
 
             modelBuilder.Entity("iRecipe.Domain.Ingredient", b =>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace iRecipe.Domain
+namespace iRecipeAPI.Domain
 {
     public class Recipe
     {
@@ -18,7 +18,7 @@ namespace iRecipe.Domain
         public int Duration { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime RecipeDate { get; set; }
         public Difficulty Difficulty { get; set; }
         public int DifficultyId { get; set; }
         public byte[] Image { get; set; }

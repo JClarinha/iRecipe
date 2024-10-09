@@ -1,4 +1,4 @@
-﻿using iRecipe.Domain;
+﻿using iRecipeAPI.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +11,7 @@ namespace iRecipeAPI.Repositories.Interfaces
     {
         List<Difficulty> GetAll();
         Difficulty GetById(int id);
+        bool GetAny(int id);
         List<Difficulty> GetByName(string name);
         Difficulty Add(Difficulty difficulty);
         Difficulty Update(Difficulty difficulty);   

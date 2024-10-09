@@ -1,4 +1,4 @@
-﻿using iRecipe.Domain;
+﻿using iRecipeAPI.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +12,7 @@ namespace iRecipeAPI.Repositories.Interfaces
         List<Unit> GetAll();
         List<Unit> GetByName(string name);
         Unit GetById(int id);
+        bool GetAny(int id);
         Unit Add(Unit unit);
         Unit Update(Unit unit);
         void Remove(Unit unit);
