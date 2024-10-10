@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace iRecipeAPI.Services.Implementations
 {
-    public class IngredientService : IIngredientSevice
+    public class IngredientService : IIngredientService
     {
         private iRecipeAPIDBContext _irecipeAPIDBContext;
         private IIngredientRepository _ingredientRepository;

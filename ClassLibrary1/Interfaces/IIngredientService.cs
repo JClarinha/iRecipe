@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace iRecipeAPI.Services.Interfaces
 {
-    public interface IIngredientSevice
+    public interface IIngredientService
     {
         List<Ingredient> GetAll();
         Ingredient GetById(int id);

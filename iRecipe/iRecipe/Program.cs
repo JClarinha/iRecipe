@@ -12,7 +12,9 @@ namespace iRecipeAPI
     {
         public static void Main(string[] args)
         {
+
             var builder = WebApplication.CreateBuilder(args);
+
 
             // Configuração do Serviço do Swagger
             builder.Services.AddSwaggerGen(options =>
@@ -44,10 +46,10 @@ namespace iRecipeAPI
             // Registo de serviços
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<ICommentService, CommentService>();
-            builder.Services.AddScoped<DifficultyService, DifficultyService>();
+            builder.Services.AddScoped<IDifficultyService, DifficultyService>();
             builder.Services.AddScoped<IFavouriteService, FavouriteService>();
             builder.Services.AddScoped<IIngredientRecipeService, IngredientRecipeService>();
-            builder.Services.AddScoped<IIngredientSevice, IngredientService>();
+            builder.Services.AddScoped<IIngredientService, IngredientService>();
             builder.Services.AddScoped<IRecipeService, RecipeService>();
             builder.Services.AddScoped<IUnitService, UnitService>();
             builder.Services.AddScoped<IUserService, UserService>();
@@ -69,6 +71,10 @@ namespace iRecipeAPI
             {
                 endpoints.MapControllers();
             });
+
+
+            app.UseStaticFiles(); // Necessário para servir ficheiros estáticos do wwwroot
+
 
             // Configuração da Interface Gráfica do Swagger
             app.UseSwagger().UseSwaggerUI(options =>

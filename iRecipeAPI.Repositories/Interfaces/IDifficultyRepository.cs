@@ -12,7 +12,7 @@ namespace iRecipeAPI.Repositories.Interfaces
         List<Difficulty> GetAll();
         Difficulty GetById(int id);
         bool GetAny(int id);
-        List<Difficulty> GetByName(string name);
+        List<Difficulty> GetByDifficultyLevel(string difficultyLevel);
         Difficulty Add(Difficulty difficulty);
         Difficulty Update(Difficulty difficulty);   
         void Remove(Difficulty difficulty);

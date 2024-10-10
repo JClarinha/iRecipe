@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using iRecipeAPI.Data.Context;
 
@@ -11,9 +12,11 @@ using iRecipeAPI.Data.Context;
 namespace iRecipeAPI.Data.Migrations
 {
     [DbContext(typeof(iRecipeAPIDBContext))]
-    partial class iRecipeAPIDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241009212136_fixingdifficulty")]
+    partial class fixingdifficulty
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -178,9 +181,9 @@ namespace iRecipeAPI.Data.Migrations
                     b.Property<int>("Duration")
                         .HasColumnType("int");
 
-                    b.Property<string>("ImagePath")
+                    b.Property<byte[]>("Image")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()

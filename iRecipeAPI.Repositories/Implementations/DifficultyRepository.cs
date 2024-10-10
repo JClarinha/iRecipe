@@ -29,9 +29,9 @@ namespace iRecipeAPI.Repositories.Implementations
             return _dbSet.Any(difficulty => difficulty.Id == id);
         }
 
-        public List<Difficulty> GetByName(string name)
+        public List<Difficulty> GetByDifficultyLevel(string difficultyLevel)
         {
-            return _dbSet.Where(difficulty => difficulty.Name.Contains(name)).ToList();
+            return _dbSet.Where(difficulty => difficulty.DifficultyLevel.Contains(difficultyLevel)).ToList();
         }
         
         public Difficulty Add(Difficulty difficulty)

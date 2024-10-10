@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,10 +21,18 @@ namespace iRecipeAPI.Domain
         public int UserId { get; set; }
         public User User { get; set; }
         public DateTime RecipeDate { get; set; }
-        public Difficulty Difficulty { get; set; }
         public int DifficultyId { get; set; }
-        public byte[] Image { get; set; }
+        public Difficulty Difficulty { get; set; }
+  
         public string Preparation { get; set; }
+
+
+
+
+        [NotMapped]
+        public IFormFile Image { get; set; }
+        public string ImagePath { get; set; }
+        
 
         
     }

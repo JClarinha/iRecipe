@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace iRecipeAPI.Services.Interfaces
 {
-    public interface IDifficultyServie
+    public interface IDifficultyService
     {
         List<Difficulty> GetAll();
         Difficulty GetById(int id);

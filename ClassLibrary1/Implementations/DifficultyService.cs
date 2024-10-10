@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace iRecipeAPI.Services.Implementations
 {
-    public class DifficultyService : IDifficultyServie
+    public class DifficultyService : IDifficultyService
     {
         private iRecipeAPIDBContext _irecipeAPIDBContext;
         private IDifficultyRepository _difficultyRepository;
